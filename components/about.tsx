@@ -13,7 +13,16 @@ import {
   FaBookOpen,
 } from "react-icons/fa";
 import { FiCpu } from "react-icons/fi";
-import { SiNextdotjs, SiReact, SiNodedotjs, SiMongodb } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
+import {
+  SiNextdotjs,
+  SiReact,
+  SiNodedotjs,
+  SiMongodb,
+  SiTypescript,
+  SiTailwindcss,
+  SiGit,
+} from "react-icons/si";
 
 export default function About() {
   const { ref } = useSectionInView("About");
@@ -48,15 +57,16 @@ export default function About() {
                 <FaGraduationCap className="h-5 w-5" />
               </div>
               <p>
-                After graduating with a degree in{" "}
+                With a background in{" "}
                 <span className="font-medium text-gray-900 dark:text-white">
-                  Accounting
+                  business and accounting
                 </span>
-                , I transitioned to tech through a coding bootcamp, mastering{" "}
+                , I discovered my passion for technology and transitioned into
+                software development. I've since built expertise in{" "}
                 <span className="font-medium text-gray-900 dark:text-white">
-                  full-stack development
+                  full-stack JavaScript development
                 </span>
-                .
+                through intensive self-study and hands-on projects.
               </p>
             </div>
 
@@ -66,10 +76,10 @@ export default function About() {
               </div>
               <p>
                 <span className="italic text-gray-900 dark:text-white">
-                  My passion
+                  What excites me most
                 </span>{" "}
-                lies in problem-solving. I thrive on the challenge of finding
-                elegant solutions. My core stack:{" "}
+                is creating efficient, user-friendly applications that solve
+                real problems. My core stack includes:{" "}
                 <span className="font-medium text-gray-900 dark:text-white">
                   <SiReact className="inline mr-1" />
                   React, <SiNextdotjs className="inline mr-1" />
@@ -78,7 +88,11 @@ export default function About() {
                   Node.js, <SiMongodb className="inline mr-1" />
                   MongoDB
                 </span>
-                . Also proficient in TypeScript and Prisma.
+                . I'm particularly interested in{" "}
+                <span className="font-medium text-gray-900 dark:text-white">
+                  performance optimization
+                </span>
+                and building accessible web applications.
               </p>
             </div>
 
@@ -87,12 +101,25 @@ export default function About() {
                 <FiCpu className="h-5 w-5" />
               </div>
               <p>
-                Currently seeking a{" "}
+                Currently focused on expanding my knowledge in{" "}
                 <span className="font-medium text-gray-900 dark:text-white">
-                  full-time developer role
+                  advanced React patterns
+                </span>{" "}
+                and{" "}
+                <span className="font-medium text-gray-900 dark:text-white">
+                  server-side rendering techniques
                 </span>
-                where I can contribute to meaningful projects while continuing
-                to grow my skills.
+                . Open to opportunities where I can contribute my
+                <span className="font-medium text-gray-900 dark:text-white">
+                  {" "}
+                  problem-solving skills
+                </span>{" "}
+                and
+                <span className="font-medium text-gray-900 dark:text-white">
+                  {" "}
+                  business acumen
+                </span>{" "}
+                to meaningful projects.
               </p>
             </div>
 
@@ -102,19 +129,19 @@ export default function About() {
               </div>
               <p>
                 <span className="italic text-gray-900 dark:text-white">
-                  Beyond coding
+                  When not coding
                 </span>
-                , I enjoy gaming, movies, and time with my dog. I'm constantly
-                learning—currently exploring{" "}
+                , I enjoy exploring new technologies, contributing to
+                open-source projects, and learning about{" "}
                 <span className="font-medium text-gray-900 dark:text-white">
-                  history, philosophy
+                  UX design principles
                 </span>
-                , and{" "}
+                . I'm also passionate about{" "}
                 <span className="font-medium text-gray-900 dark:text-white">
                   <FaMusic className="inline mr-1" />
-                  guitar
-                </span>
-                .
+                  music production
+                </span>{" "}
+                and the intersection of technology and creativity.
               </p>
             </div>
           </motion.div>
@@ -138,6 +165,10 @@ export default function About() {
                 ),
               },
               {
+                name: "TypeScript",
+                icon: <SiTypescript className="h-5 w-5 text-blue-600" />,
+              },
+              {
                 name: "Node.js",
                 icon: <SiNodedotjs className="h-5 w-5 text-green-500" />,
               },
@@ -146,12 +177,12 @@ export default function About() {
                 icon: <SiMongodb className="h-5 w-5 text-green-600" />,
               },
               {
-                name: "TypeScript",
-                icon: <span className="text-sm font-medium">TS</span>,
+                name: "Tailwind",
+                icon: <SiTailwindcss className="h-5 w-5 text-cyan-400" />,
               },
               {
-                name: "Prisma",
-                icon: <span className="text-sm font-medium">Prisma</span>,
+                name: "Git",
+                icon: <SiGit className="h-5 w-5 text-orange-600" />,
               },
             ].map((tech, index) => (
               <div
@@ -159,7 +190,7 @@ export default function About() {
                 className="px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-sm border border-gray-200 dark:border-gray-700 flex items-center gap-2 hover:scale-105 transition-transform"
               >
                 {tech.icon}
-                <span className="text-sm font-medium">{tech.name}</span>
+                <span className="text-xs font-medium">{tech.name}</span>
               </div>
             ))}
           </motion.div>
@@ -189,6 +220,10 @@ export default function About() {
             <div className="bg-white dark:bg-gray-800 p-3 rounded-xl shadow-lg flex items-center gap-2 border border-gray-200 dark:border-gray-700">
               <SiReact className="h-6 w-6 text-blue-500" />
               <span className="font-medium text-sm">React</span>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-3 rounded-xl shadow-lg flex items-center gap-2 border border-gray-200 dark:border-gray-700">
+              <TbBrandReactNative className="h-6 w-6 text-blue-500" />
+              <span className="font-medium text-sm">React Native</span>
             </div>
             <div className="bg-white dark:bg-gray-800 p-3 rounded-xl shadow-lg flex items-center gap-2 border border-gray-200 dark:border-gray-700">
               <SiNextdotjs className="h-6 w-6 text-black dark:text-white" />

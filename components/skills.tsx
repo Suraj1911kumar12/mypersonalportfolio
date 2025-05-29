@@ -7,7 +7,6 @@ import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import { FiCode, FiCpu, FiDatabase, FiLayers } from "react-icons/fi";
 
-// Skill categories with icons
 const skillCategories = [
   {
     name: "Frontend",
