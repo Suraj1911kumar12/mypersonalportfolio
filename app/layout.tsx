@@ -31,7 +31,7 @@ export default function RootLayout({
         <Loader />
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Header />
+            {/* <Header /> */}
             {children}
             <Footer />
 

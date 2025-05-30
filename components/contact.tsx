@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -13,12 +13,13 @@ import { FaGithubSquare } from "react-icons/fa";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const formRef = useRef<HTMLFormElement>(null);
 
   return (
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-32 sm:mb-48  mx-auto px-4"
+      className="mb-32 max-w-4xl sm:mb-48  mx-auto px-4"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -60,10 +61,10 @@ export default function Contact() {
                 Email Me
               </h3>
               <a
-                href="mailto:example@gmail.com"
+                href="mailto:isurajkumar.cse@gmail.com"
                 className="text-blue-600 hover:underline dark:text-blue-400"
               >
-                example@gmail.com
+                isurajkumar.cse@gmail.com
               </a>
             </div>
           </div>
@@ -104,6 +105,7 @@ export default function Contact() {
 
         {/* Contact Form */}
         <motion.form
+          ref={formRef}
           className="space-y-6"
           initial={{ x: 20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -115,6 +117,7 @@ export default function Contact() {
               return;
             }
             toast.success("Message sent successfully!");
+            formRef.current?.reset();
           }}
         >
           <div className="space-y-4">
